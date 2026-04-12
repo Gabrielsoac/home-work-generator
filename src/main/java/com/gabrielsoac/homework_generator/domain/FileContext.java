@@ -1,7 +1,6 @@
 package com.gabrielsoac.homework_generator.domain;
 
-import java.io.File;
-
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,13 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FileContext {
-    private File file;
+    private MultipartFile file;
     private FileType type;
 
-    public FileContext(File file){
-        String filename = file.getName();
+    public FileContext(MultipartFile file){
+        String filename = file.getOriginalFilename();
         int indexDot = filename.lastIndexOf('.');
-        String extension = filename.substring(indexDot);
+        String extension = filename.substring(indexDot + 1);
 
         boolean valid = false;
         for(FileType type : FileType.values()){
