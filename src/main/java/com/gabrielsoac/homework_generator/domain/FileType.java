@@ -1,6 +1,6 @@
 package com.gabrielsoac.homework_generator.domain;
 
-public enum InputType {
-    text,
-    file
+public enum FileType {
+    pdf,
+    docx
 }
