@@ -1,4 +1,4 @@
-package com.gabrielsoac.homework_generator.domain;
+package com.gabrielsoac.homework_generator.domain.files;
 
 import org.springframework.web.multipart.MultipartFile;
 

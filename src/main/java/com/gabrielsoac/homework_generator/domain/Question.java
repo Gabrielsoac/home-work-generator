@@ -1,13 +1,12 @@
 package com.gabrielsoac.homework_generator.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import java.util.Map;
 
-@Getter
-@AllArgsConstructor
-public class Question {
-    String number;
-    String summary;
-    String correctResponse;
-    QuestionOptions options;
-}
+public record Question 
+    (
+        String summary,
+        String number,
+        Map<String,String> options,
+        String correctAnswer,
+        String Explan
+    ){}
