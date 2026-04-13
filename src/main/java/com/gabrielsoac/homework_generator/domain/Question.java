@@ -8,5 +8,5 @@ public record Question
         String number,
         Map<String,String> options,
         String correctAnswer,
-        String Explan
+        String Explain
     ){}
